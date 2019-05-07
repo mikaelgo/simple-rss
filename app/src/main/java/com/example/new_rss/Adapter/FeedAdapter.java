@@ -88,7 +88,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
 
-                //if its not a long click then open the news url
+                //if its not a long click then open the news url in browser
                 if(!isLongClick) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(rssObject.getItems().get(position).getLink()));
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
